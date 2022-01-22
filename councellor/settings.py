@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloundinary_storage',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'tempus_dominus',
-    'django_bootstrap5'
+    'django_bootstrap5',
     'booking',
 ]
 
