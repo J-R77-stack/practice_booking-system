@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'tempus_dominus',
-    'django_bootstrap5',
+    'bootstrap5',
     'booking',
 ]
 
