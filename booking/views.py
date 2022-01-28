@@ -35,3 +35,10 @@ def view_book(request):
     Function enables user to view the booking page.
     """
     return render(request, 'book.html')
+
+
+def view_blog(request):
+    """
+    Function enables user to view the blog page.
+    """
+    return render(request, 'blog.html')    
