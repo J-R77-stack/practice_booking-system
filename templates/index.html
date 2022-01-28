@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Let Nothing Hold You Back</h1>
+                    <br/>
+                    <br/>
+                    <a class="btn btn-primary" href="{% url 'book' %}">Book An Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
