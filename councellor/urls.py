@@ -18,5 +18,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('booking.urls'), name='booking_urls')
+    path('', include('booking.urls'), name='booking_urls'),
+    path('accounts/', include('allauth.urls')),
 ]
+
+handler404 = 'booking.views.handler404'
+handler500 = 'booking.views.handler500'
