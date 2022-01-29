@@ -21,6 +21,5 @@ class BookingAdmin(ModelAdmin):
                    'email')
     actions = ['approve_booking']
 
-    def approve_booking(self, request, queryset):
-        queryset.update(approved=True)
+    
 
