@@ -8,17 +8,17 @@ class BookingAdmin(ModelAdmin):
     Class registered to represent model in admin database.
     """
     list_display = ('user', 'name',
-                    'appointment_date_and_time',
                     'phone_number',
-                    'email')
+                    'email',
+                    'appointment_date_and_time')
     search_fields = ('name',
-                     'appointment_date_and_time',
                      'phone_number',
-                     'email')
+                     'email',
+                     'appointment_date_and_time')
     list_filter = ('name',
-                   'appointment_date_and_time',
                    'phone_number',
-                   'email')
+                   'email', 
+                   'appointment_date_and_time')
     actions = ['approve_booking']
 
     

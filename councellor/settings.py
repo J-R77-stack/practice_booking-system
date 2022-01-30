@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'tempus_dominus',
     'bootstrap5',
     'crispy_forms',
+    'crispy_bootstrap5',
     'booking',
 ]
 
@@ -59,6 +60,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL ='/'
 LOGOUT_REDIRECT_URL ='/'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
@@ -70,7 +73,9 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-TEMPUS_DOMINUS_LOCALIZE = False
+TEMPUS_DOMINUS_LOCALIZE = True
+
+TEMPUS_DOMINUS_INCLUDE_ASSETS = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

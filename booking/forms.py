@@ -16,12 +16,12 @@ class BookingForm(forms.ModelForm):
         """
         model = Booking
         fields = ('name', 'phone_number',
-                  'appointment_date_and_time', 'email', )
+                   'email', 'appointment_date_and_time')
 
     def __init__(self, *args, **kwargs):
         """
         Add class, required field and DateTime picker
-        to third field.
+        to fourth field.
         """
         super().__init__(*args, **kwargs)
         self.fields['appointment_date_and_time'].widget.attrs['class'] = 'form-control datetimepicker-input'

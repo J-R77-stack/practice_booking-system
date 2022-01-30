@@ -5,16 +5,17 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
-<header class="masthead">
+<section class="masthead">
   <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
     <div class="container">
       <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
           <h3>{% trans "Sign In" %}</h3>
+          <br>
+          <br>
     
-          <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If you
-            have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-            first.{% endblocktrans %}</p>
+          <p>{% blocktrans %}Welcome back to Mike Wilkins Councelling. If you have not created an account yet, 
+            then please <a class="link" href="{{ signup_url }}">sign up</a> first to make an appointment.{% endblocktrans %}</p>
         </div>
       </div>
       <div class="row">
@@ -25,11 +26,12 @@
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
+            {% csrf_token %}
             <button class="btn btn-primary right" type="submit">{% trans "Sign In" %}</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-</header>
+</section>
 {% endblock %}

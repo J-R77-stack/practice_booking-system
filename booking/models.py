@@ -10,9 +10,9 @@ class Booking(models.Model):
     name = models.CharField(max_length=80, null=True)
     appointment_date_and_time = models.DateTimeField(null=True)
 
-    def validate_date(reservation_date_and_time):
+    def validate_date(appointment_date_and_time):
         
-        if reservation_date_and_time < timezone.now():
+        if appointment_date_and_time < timezone.now():
             raise ValidationError("Sorry no available appointments. Please try another day or time")
     appointment_date_and_time = models.DateTimeField(null=True,blank=True,validators=[validate_date])
     
