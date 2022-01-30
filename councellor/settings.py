@@ -73,9 +73,9 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
-TEMPUS_DOMINUS_LOCALIZE = True
+TEMPUS_DOMINUS_LOCALIZE = False
 
-TEMPUS_DOMINUS_INCLUDE_ASSETS = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

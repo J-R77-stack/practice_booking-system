@@ -7,7 +7,7 @@ from django.utils import timezone
 class Booking(models.Model):
     
     user = models.ForeignKey(User, null=True, blank=True,on_delete=models.CASCADE)
-    name = models.CharField(max_length=80, null=True)
+    name = models.CharField(max_length=20, null=True)
     appointment_date_and_time = models.DateTimeField(null=True)
 
     def validate_date(appointment_date_and_time):

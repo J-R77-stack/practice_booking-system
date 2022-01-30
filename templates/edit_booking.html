@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
@@ -7,36 +7,40 @@
         <section class="page-section clearfix">
             <div class="container">
                 <div class="intro">
+                    
                     <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                         <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Appointment Booking Form</span>
+                            <span class="section-heading-upper">Edit your Appointment</span>
+        
+        
                         </h2>
+        
+                        <p><a href="{% url 'view_booking' %}">Changed my mind, back to my Appointment</a></p>
                         <div class="row">
                             <div class="col-md-8 mt-3 offset-md-2">
-                            
-                                <form method="POST" action="{% url 'add_booking' %}" name="form">
+                                <form method="POST" name="form">
         
-                                    {{ form|crispy }}
+                                    {{form|crispy}}
         
         
                                     {% csrf_token %}
         
         
                                     <div class="intro-button mx-auto"><button class="btn btn-primary btn-xl"
-                                            type="submit">Submit Booking</button>
+                                            type="submit">Submit edited booking</button>
                                     </div>
-        
                                 </form>
+        
                             </div>
-                            
-                         
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
         </section>
+        
     </div>
 </section>
 
-{% endblock %}
+
+
+{% endblock content %}
